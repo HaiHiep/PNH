@@ -1,0 +1,2 @@
+rootProject.name='PNH'
+include ':app'

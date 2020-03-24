@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PNH</string>
+    <string name="title">PNH記録ノート</string>
+    <string name="doctor_infor">担当医師情報</string>
+</resources>
