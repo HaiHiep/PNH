@@ -31,7 +31,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/authenCode"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -42,6 +41,7 @@
                     android:textStyle="bold" />
 
                 <EditText
+                    android:id="@+id/txtAuthenCode"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_marginLeft="20dp"
@@ -73,7 +73,7 @@
                     android:gravity="right">
 
                     <TextView
-                        android:id="@+id/forgot_code"
+                        android:id="@+id/txtForgotCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="認証コードを忘れた方"
@@ -84,7 +84,7 @@
                         android:layout_width="10dp"
                         android:layout_height="20dp"
                         android:layout_marginLeft="10dp"
-                        android:layout_toRightOf="@+id/forgot_code"
+                        android:layout_toRightOf="@+id/txtForgotCode"
                         android:src="@drawable/src_assets_icons_forwardarrow" />
                 </RelativeLayout>
 
@@ -146,7 +146,7 @@
 
 
             <RelativeLayout
-                android:id="@+id/btnDoctorInfor"
+                android:id="@+id/btnDoctorInfo"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginLeft="20dp"
