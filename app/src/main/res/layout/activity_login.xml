@@ -5,173 +5,166 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="@drawable/src_assets_images_bg_login"
+    android:gravity="center">
 
-    <RelativeLayout
+    <LinearLayout
+        android:layout_centerInParent="true"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/src_assets_images_bg_login" />
-
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <LinearLayout
-            android:layout_centerInParent="true"
+            android:id="@+id/loginLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/color_black"
             android:orientation="vertical">
-            <LinearLayout
-                android:id="@+id/loginLayout"
-                android:layout_width="match_parent"
+
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:background="@color/color_black"
-                android:orientation="vertical">
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="@string/title"
+                android:textColor="@color/color_white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/title"
-                    android:textColor="@color/color_white"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/txtAuthenCode"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="20dp"
-                    android:background="@color/color_white"
-                    android:hint="認証コード(4ケタの数字を入力)"
-                    android:padding="15dp"
-                    android:textSize="15sp" />
-
-                <Button
-                    android:id="@+id/btnLogin"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="20dp"
-                    android:background="@drawable/orangebutton"
-                    android:text="ログイン"
-                    android:textColor="@color/color_white"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="20dp"
-                    android:gravity="right">
-
-                    <TextView
-                        android:id="@+id/txtForgotCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="認証コードを忘れた方"
-                        android:textColor="@color/color_white"
-                        android:textSize="15sp" />
-
-                    <ImageView
-                        android:layout_width="10dp"
-                        android:layout_height="20dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_toRightOf="@+id/txtForgotCode"
-                        android:src="@drawable/src_assets_icons_forwardarrow" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/btnGuide"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginRight="20dp"
-                    android:background="@drawable/graybutton">
-
-                    <ImageView
-                        android:id="@+id/imgView1"
-                        android:layout_width="20dp"
-                        android:layout_height="30dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="15dp"
-                        android:src="@drawable/src_assets_icons_icon_first" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="20dp"
-                        android:layout_toRightOf="@+id/imgView1"
-                        android:gravity="center"
-                        android:text="初めての方"
-                        android:textColor="@color/color_white" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/btnRecover"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="30dp"
-                    android:background="@drawable/graybutton">
-
-                    <ImageView
-                        android:id="@+id/imgView2"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="15dp"
-                        android:src="@drawable/src_assets_icons_icon_data" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="15dp"
-                        android:layout_toRightOf="@+id/imgView2"
-                        android:gravity="center"
-                        android:text="データを復元される方"
-                        android:textColor="@color/color_white" />
-                </RelativeLayout>
-            </LinearLayout>
-
-
-            <RelativeLayout
-                android:id="@+id/btnDoctorInfo"
+            <EditText
+                android:id="@+id/txtAuthenCode"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/borderorangebutton"
-                android:gravity="center">
+                android:background="@color/color_white"
+                android:hint="認証コード(4ケタの数字を入力)"
+                android:padding="15dp"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/orangebutton"
+                android:text="ログイン"
+                android:textColor="@color/color_white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/txtForgotCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="認証コードを忘れた方"
+                    android:textColor="@color/color_white"
+                    android:textSize="15sp" />
 
                 <ImageView
-                    android:id="@+id/imgView3"
+                    android:layout_width="10dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/txtForgotCode"
+                    android:src="@drawable/src_assets_icons_forwardarrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btnGuide"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/graybutton">
+
+                <ImageView
+                    android:id="@+id/imgView1"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/src_assets_icons_icon_first" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/imgView1"
+                    android:gravity="center"
+                    android:text="初めての方"
+                    android:textColor="@color/color_white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btnRecover"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/graybutton">
+
+                <ImageView
+                    android:id="@+id/imgView2"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="15dp"
-                    android:src="@drawable/src_assets_icons_icon_doctor" />
+                    android:src="@drawable/src_assets_icons_icon_data" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="15dp"
-                    android:layout_toRightOf="@+id/imgView3"
+                    android:layout_toRightOf="@+id/imgView2"
                     android:gravity="center"
-                    android:text="@string/doctor_infor"
-                    android:textColor="@color/color_orange" />
+                    android:text="データを復元される方"
+                    android:textColor="@color/color_white" />
             </RelativeLayout>
         </LinearLayout>
-    </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/btnDoctorInfo"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/borderorangebutton"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgView3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/src_assets_icons_icon_doctor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/imgView3"
+                android:gravity="center"
+                android:text="@string/doctor_infor"
+                android:textColor="@color/color_orange" />
+        </RelativeLayout>
+    </LinearLayout>
+
 </LinearLayout>

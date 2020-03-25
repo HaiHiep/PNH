@@ -2,4 +2,7 @@
     <string name="app_name">PNH</string>
     <string name="title">PNH記録ノート</string>
     <string name="doctor_infor">担当医師情報</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

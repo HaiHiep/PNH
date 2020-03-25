@@ -7,4 +7,5 @@
     <color name="color_white">#FFFFFF</color>
     <color name="color_orange">#FF9800</color>
     <color name="color_gray">#AEACAC</color>
+    <color name="color_white_tranfer">#80FFFF</color>
 </resources>

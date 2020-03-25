@@ -2,6 +2,7 @@ package com.vietis.pnh;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -44,19 +45,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnLogin:
-				Toast.makeText(this, "btnLogin", Toast.LENGTH_SHORT).show();
+                Intent homeIntent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(homeIntent);
                 break;
             case R.id.txtForgotCode:
-				Toast.makeText(this, "txtForgotCode", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btnGuide:
-				Toast.makeText(this, "btnGuide", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btnRecover:
-				Toast.makeText(this, "btnRecover", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btnDoctorInfo:
-				Toast.makeText(this, "btnDoctorInfo", Toast.LENGTH_SHORT).show();
                 break;
 			default:
 				break;

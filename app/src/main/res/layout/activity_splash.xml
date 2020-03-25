@@ -5,12 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashActivity"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@drawable/src_assets_images_bg_login">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/src_assets_images_bg_login"/>
     <TextView
         android:layout_centerInParent="true"
         android:layout_width="wrap_content"
