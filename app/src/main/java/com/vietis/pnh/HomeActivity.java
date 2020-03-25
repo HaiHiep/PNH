@@ -14,31 +14,31 @@ import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
 
-    RecyclerView recyclerView;
+	RecyclerView recyclerView;
 
-    List<Movie> movieList;
+	List<Movie> movieList;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_home);
 
-        recyclerView = findViewById(R.id.recyclerView);
+		recyclerView = findViewById(R.id.recyclerView);
 
-        initData();
-        initRecyclerView();
-    }
+		initData();
+		initRecyclerView();
+	}
 
-    private void initRecyclerView() {
-        MovieAdapter movieAdapter = new MovieAdapter(movieList);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(movieAdapter);
-    }
+	private void initRecyclerView() {
+		MovieAdapter movieAdapter = new MovieAdapter(movieList);
+		recyclerView.setLayoutManager(new LinearLayoutManager(this));
+		recyclerView.setAdapter(movieAdapter);
+	}
 
-    private void initData() {
-        movieList = new ArrayList<>();
-        movieList.add(new Movie("Iron Man", "7.9", "2008", "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil."));
-        movieList.add(new Movie("The Incredible Hulk", "6.7", "2008", "Bruce Banner, a scientist on the run from the U.S. Government, must find a cure for the monster he turns into, whenever he loses his temper."));
-        movieList.add(new Movie("Avengers: Endgame","8.5","2019","After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe."));
-    }
+	private void initData() {
+		movieList = new ArrayList<>();
+		movieList.add(new Movie("Iron Man", "7.9", "2008", "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil."));
+		movieList.add(new Movie("The Incredible Hulk", "6.7", "2008", "Bruce Banner, a scientist on the run from the U.S. Government, must find a cure for the monster he turns into, whenever he loses his temper."));
+		movieList.add(new Movie("Avengers: Endgame","8.5","2019","After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe."));
+	}
 }
